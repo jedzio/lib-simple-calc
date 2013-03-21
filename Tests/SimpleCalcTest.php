@@ -265,5 +265,20 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
             array(-5, 0)
         );
     }
-  
+
+    /**
+     * @dataProvider getTwoMultiplyOneMinusTwoDivXPlusTen
+     *
+     */
+
+    public function testTwoMultiplyOneMinusTwoDivXPlusTen($x, $result){
+        $this->assertEquals($result, SimpleCalc::twoMultiplyOneMinusTwoDivXPlusTen($x));
+    }
+
+    public function getTwoMultiplyOneMinusTwoDivXPlusTen(){
+        return array(
+            array(4, 2 / 7),
+            array(-4, -2)
+        );
+    }
 }
