@@ -289,4 +289,20 @@ class SimpleCalc
         return 1/($x+5);
     }
 
+
+    /*
+    * F(x) = 2*(x-2)/(x+10)
+    *
+    * @param mixed $x Argument (integer or float)
+    *
+    * @return float The result of F(x)
+    */
+
+    public static function twoMultiplyOneMinusTwoDivXPlusTen($x){
+        if ($x == -10) {
+            throw new \InvalidArgumentException('Divisor must not be equal to -10.');
+        }
+
+        return 2*($x-2)/($x+10);
+    }
 }
