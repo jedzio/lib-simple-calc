@@ -190,6 +190,20 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1 / 3, SimpleCalc::oneDivSquareXMinus1(2));
     }
 
+    public function testXSquarePlus1DivideByXMinus1()
+    {
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(2));
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(3));
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testXSquarePlus1DivideByXMinus1DivideByZero()
+    {
+        SimpleCalc::xSquarePlus1DivideByXMinus1(1);
+    }
+
     /**
      * @dataProvider getFOnePlusXOneMinusXData
      *
@@ -203,7 +217,6 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array(2, -3),
-
         );
     }
 
@@ -215,4 +228,77 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         SimpleCalc::fOnePlusXOneMinusX(1);
     }
 
+    /**
+     * @dataProvider getTwentyEightPlusXDivOneMinusXData
+     *
+     */
+    public function testTwentyEightPlusXDivOneMinusX($x, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::twentyEightPlusXDivOneMinusX($x));
+    }
+
+    public function getTwentyEightPlusXDivOneMinusXData()
+    {
+        return array(
+            array(0, 28)
+        );
+    }
+
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testTwentyEightPlusXDivOneMinusXException()
+    {
+        SimpleCalc::twentyEightPlusXDivOneMinusX(1);
+    }
+    
+    
+     /**
+     * @dataProvider getNinePlusXMultiplyFive
+     *
+     */
+    public function testNinePlusXMultiplyFive($x, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::NinePlusXMultiplyFive($x));
+    }
+
+    public function getNinePlusXMultiplyFive()
+    {
+        return array(
+            array(1, 50)
+        );
+    }
+    
+    /**
+     * @dataProvider getOneDivXPlusFive
+     * 
+     */
+    
+    public function testOneDivXPlusFive($x, $result){
+        $this->assertEquals($result, SimpleCalc::oneDivXPlusFive($x));
+    }
+    
+    public function getOneDivXPlusFive(){
+        return array(
+            array(5, 0.1),
+            array(-5, 0)
+        );
+    }
+
+    /**
+     * @dataProvider getTwoMultiplyOneMinusTwoDivXPlusTen
+     *
+     */
+
+    public function testTwoMultiplyOneMinusTwoDivXPlusTen($x, $result){
+        $this->assertEquals($result, SimpleCalc::twoMultiplyOneMinusTwoDivXPlusTen($x));
+    }
+
+    public function getTwoMultiplyOneMinusTwoDivXPlusTen(){
+        return array(
+            array(4, 2 / 7),
+            array(-4, -2)
+        );
+    }
 }

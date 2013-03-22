@@ -208,6 +208,23 @@ class SimpleCalc
     }
 
     /**
+     * Function f(x) = (x * x + 1) / (x - 1)
+     *
+     * @param mixed $x Argument (integer or float)
+     *
+     * @return float The result of (x * x + 1) / (x - 1)
+     * @throws \InvalidArgumentException The exception is thrown when the divisor $x is equal to 1
+     */
+    public static function xSquarePlus1DivideByXMinus1($x)
+    {
+        if($x == 1) {
+            throw new \InvalidArgumentException('Divisor must not be equal to 0.');
+        }
+
+        return ($x * $x + 1) / ($x - 1);
+    }
+
+     /**
      * Function f(x) = (1 + x) / (1 - x)
      *
      * @param mixed $x Argument (integer of float)
@@ -224,6 +241,7 @@ class SimpleCalc
         return (1 + $x)  / (1 - $x);
     }
 
+
     /*
      * Function f(x) = (1 + x) / (1 - x)
      * @param mixed $x First number (integer of float)
@@ -238,5 +256,69 @@ class SimpleCalc
         }
 
         return (1 + $x)/(1 - $x);
+
+    /**
+     * Function f(x) = (28+x)/(1-x)
+     *
+     * @param mixed $x Argument (integer of float)
+     *
+     * @return float The result of (228+x)/(1-x)
+     * @throws \InvalidArgumentException The exception is thrown when the divisor $b is equal to 1
+     *
+     */
+
+    public static function twentyEightPlusXDivOneMinusX($x)
+    {
+        if ($x == 1) {
+            throw new \InvalidArgumentException('Divisor must not be equal to 0.');
+        }
+
+        return ((28 + $x) / ( 1 - $x ));
+    }
+
+    /**
+     * Function f(x) = (9+x)*5
+     *
+     * @param mixed $x Argument (integer of float)
+     *
+     * @return float The result of (9+x)*5
+     *
+     */
+    public static function NinePlusXMultiplyFive($x)
+    {
+        return (9 + $x) * 5;
+    }
+    
+    /*
+     * F(x) = 1/(x+5)
+     * 
+     * @param mixed $x Argument (integer or float)
+     * 
+     * @return float The result of F(x)
+     */
+    
+    public static function oneDivXPlusFive($x){
+        if ($x == -5) {
+            throw new \InvalidArgumentException('Divisor must not be equal to -5.');
+        }
+        
+        return 1/($x+5);
+    }
+
+
+    /*
+    * F(x) = 2*(x-2)/(x+10)
+    *
+    * @param mixed $x Argument (integer or float)
+    *
+    * @return float The result of F(x)
+    */
+
+    public static function twoMultiplyOneMinusTwoDivXPlusTen($x){
+        if ($x == -10) {
+            throw new \InvalidArgumentException('Divisor must not be equal to -10.');
+        }
+
+        return 2*($x-2)/($x+10);
     }
 }
