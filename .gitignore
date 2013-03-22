@@ -2,4 +2,5 @@
 /coverage/
 /docs/
 /phpcs/
-/nbproject/private/
+/nbproject/
+/vendor/
