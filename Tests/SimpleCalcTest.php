@@ -41,11 +41,31 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider getDivideData
-     *
      */
     public function testDivide($a, $b, $result)
     {
         $this->assertEquals($result, SimpleCalc::divide($a, $b));
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testFByOneExceptionMG()
+    {
+        SimpleCalc::fNewfunctionMg(1, 0);
+    }
+
+    public function getMultiplyDataMG() {
+        return array(
+            array(2, -3)
+        );
+    }
+
+    /**
+     * @dataProvider getMultiplyDataMG
+     */
+    public function testFByOneMG($x, $result) {
+        $this->assertEquals($result, SimpleCalc::fNewfunctionMg($x));
     }
 
     public function getDivideData()

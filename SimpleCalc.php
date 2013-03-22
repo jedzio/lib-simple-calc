@@ -241,6 +241,22 @@ class SimpleCalc
         return (1 + $x)  / (1 - $x);
     }
 
+
+    /*
+     * Function f(x) = (1 + x) / (1 - x)
+     * @param mixed $x First number (integer of float)
+     * 
+     * @return float The result of f(x) = (1 + x) / (1 - x)
+     * @throws \InvalidArgumentException The exception is thrown when x =1
+     */
+    public static function fNewfunctionMg($x)
+    {
+        if ($x == 1) {
+            throw new \InvalidArgumentException('$x must by equal to 1.');
+        }
+
+        return (1 + $x)/(1 - $x);
+
     /**
      * Function f(x) = (28+x)/(1-x)
      *
