@@ -132,5 +132,8 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(18, SimpleCalc::sumOfSquares(array(-3, -3)));
     }
 
-
+    public function testSumTablix()
+    {
+        $this->assertEquals(9, SimpleCalc::sumTablix(array(1, 6, 2)));
+    }
 }
