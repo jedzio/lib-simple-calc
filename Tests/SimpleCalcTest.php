@@ -84,7 +84,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         return array(
             array(3.5, array(2, 5)),
             array(4.5, array(5, 4)),
-            array(2.5, array(2, 3)),
+            array(3, array(2, 3, 1  , 4, 5)),
         );
     }
 
