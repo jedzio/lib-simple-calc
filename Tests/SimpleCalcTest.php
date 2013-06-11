@@ -172,4 +172,11 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals(9, SimpleCalc::sumTablix(array(1, 6, 2)));
     }
+
+    public function testSumOfSqrt()
+    {
+        $this->assertEquals(5, SimpleCalc::sumOfSqrt(array(4, 9)));
+        $this->assertEquals(4, SimpleCalc::sumOfSqrt(array(4, 4)));
+        $this->assertEquals(6, SimpleCalc::sumOfSqrt(array(9, 9)));
+    }
 }
