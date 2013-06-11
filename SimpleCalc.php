@@ -199,4 +199,5 @@ class SimpleCalc
         }
         return $sum;
     }
+
 }
