@@ -64,10 +64,28 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         SimpleCalc::divide(30, 0);
     }
 
+
     public function testMaxFromArray()
     {
         $this->assertEquals(6, SimpleCalc::maxFromArray(array(1, 6, 2)));
         $this->assertEquals(1, SimpleCalc::maxFromArray(Array(-2,-3,1,0,-10)));
         $this->assertEquals(2, SimpleCalc::maxFromArray(Array(2)));
     }
+
+    /**
+     * @dataProvider getAverageData
+     */
+    public function testAverage($result, $a)
+    {
+        $this->assertEquals($result,SimpleCalc::average($a));
+    }
+    public function getAverageData()
+    {
+        return array(
+            array(3.5, array(2, 5)),
+            array(4.5, array(5, 4)),
+            array(3, array(2, 3, 1  , 4, 5)),
+        );
+    }
+
 }
