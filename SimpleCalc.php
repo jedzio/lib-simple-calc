@@ -101,17 +101,17 @@ class SimpleCalc
     /**
      * MaxFromArray
      *
-     * @param mixed $a Table (integer of float)
+     * @param array $a Table (integer)
      *
-     * @return float The max of table
+     * @return int The max of table
      */
     public static function maxFromArray($a)
     {
-        $max = 0;
+        $max = $a[0];
 
-        for ($i = 0; $i < $a.ob_get_length(); $i++) {
-            if($max < $a[i])
-                $max = $a[i];
+        for ($i = 1; $i < count($a); $i++) {
+            if($max < $a[$i])
+                $max = $a[$i];
         }
 
         return $max;

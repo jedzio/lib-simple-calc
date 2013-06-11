@@ -66,7 +66,8 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
 
     public function testMaxFromArray()
     {
-        $this->assertEquals(6, SimpleCalc::maxFromArray(array(1,2,6,3,2)));
-        $this->assertEquals(1, SimpleCalc::maxFromArray(array(-2,-3,1,0,-10)));
+        $this->assertEquals(6, SimpleCalc::maxFromArray(array(1, 6, 2)));
+        $this->assertEquals(1, SimpleCalc::maxFromArray(Array(-2,-3,1,0,-10)));
+        $this->assertEquals(2, SimpleCalc::maxFromArray(Array(2)));
     }
 }
