@@ -138,6 +138,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array(17, array(2, 5, 10)),
+            array(3, array(2, -1)),
             array(17, array(2,-5,10)),
             array(15, array(2, 3, -1  , -4, 5)),
         );
