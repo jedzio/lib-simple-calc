@@ -78,7 +78,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
      */
     public function testAverage($result, $a)
     {
-        SimpleCalc::average($result, $a);
+        $this->assertEquals($result,SimpleCalc::average($a));
     }
     public function getAverageData()
     {
