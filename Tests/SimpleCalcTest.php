@@ -20,6 +20,24 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(-10, SimpleCalc::subtract(10, 20));
     }
 
+	public function getMinFromTable() {
+        return array(
+            array(array(1, 2, 3), 1),
+            array(array(9, 8, 7), 7),
+            array(array(5, 5, 2), 2),
+            array(array(1, 1, 2), 1),
+			array(array(2, 2, 2), 2),
+						
+        );
+    }
+
+    /**
+     * @dataProvider getMinFromTable
+     */
+    public function testMinFromTable($array, $result) {
+        $this->assertEquals($result, SimpleCalc::minFromTable($array));
+    }
+
     /**
      * @dataProvider getMultiplyData
      *

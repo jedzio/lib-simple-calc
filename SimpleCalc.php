@@ -105,6 +105,40 @@ class SimpleCalc
     }
 
     /**
+     * This function return the min of table.
+     *
+     * @param array $table Array with numbers
+     *
+     * @returns float
+     * @throws \InvalidArgumentException The exception is thrown when the param is not a array
+     * @throws \InvalidArgumentException The exception is thrown when the array is empty
+     */
+    public static function minFromTable(array $table)
+    {
+        if (!is_array($table)) {
+            throw new \InvalidArgumentException('Function require the array,' . gettype($table));
+        }
+
+        if (count($table) == 0) {
+            throw new \InvalidArgumentException('Table is empty');
+        }
+
+        $min = $table[0];
+
+        if ( count($table) > 1)
+        {
+            foreach($table as $value)
+            {
+                if ($value < $min) {
+                    $min = $value;
+                }
+            }
+        }
+
+        return $min;
+    }
+
+    /**
      * Zero
      *
      * @return int The result is always equal to 0
