@@ -199,7 +199,7 @@ class SimpleCalc
         }
         return $sum;
     }
-    
+
     /*
         * Sum of integer tablix
         *
