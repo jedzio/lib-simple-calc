@@ -47,27 +47,6 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($result, SimpleCalc::divide($a, $b));
     }
 
-    /**
-     * @expectedException InvalidArgumentException
-     */
-    public function testFByOneExceptionMG()
-    {
-        SimpleCalc::fNewfunctionMg(1, 0);
-    }
-
-    public function getMultiplyDataMG() {
-        return array(
-            array(2, -3)
-        );
-    }
-
-    /**
-     * @dataProvider getMultiplyDataMG
-     */
-    public function testFByOneMG($x, $result) {
-        $this->assertEquals($result, SimpleCalc::fNewfunctionMg($x));
-    }
-
     public function getDivideData()
     {
         return array(
@@ -83,11 +62,6 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     public function testDivideByZero()
     {
         SimpleCalc::divide(30, 0);
-    }
-
-    public function testZero()
-    {
-        $this->assertEquals(0, SimpleCalc::zero());
     }
 
 }
