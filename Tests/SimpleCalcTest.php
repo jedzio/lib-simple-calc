@@ -40,7 +40,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider getMultiplyData
+     * @dataProvider getProductOfArray
      *
      */
     public function testProductOfArray($array, $result)
