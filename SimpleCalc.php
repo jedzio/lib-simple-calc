@@ -185,4 +185,19 @@ class SimpleCalc
         }
         return ($sum/$cnt);
     }
+    /**
+     *
+     * @param $tab Argument (Integer[])
+     *
+     * @return integer
+     */
+    public static function sumOfSquares($tab)
+    {
+        $sum =0;
+        foreach ($tab as $itemn){
+            $sum += $itemn*$itemn;
+        }
+        return $sum;
+    }
+
 }
