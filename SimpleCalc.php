@@ -249,4 +249,21 @@ class SimpleCalc
         }
         return $result;
     }
+
+    /*
+        * Sum of sqrt integer tablix
+        *
+        * @param array $a Table (integer)
+        *
+        * @return integer The sum of table
+        */
+    public static function sumOfSqrt($table)
+    {
+        $cnt = count($table);
+        $sum = 0;
+        for ($x =0;$x < $cnt; $x++ ){
+            $sum = $sum + sqrt($table[$x]);
+        }
+        return ($sum);
+    }
 }
