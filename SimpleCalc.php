@@ -133,6 +133,6 @@ class SimpleCalc
         for ($x =0;$x < $cnt; $x++ ){
             $sum = $sum + $table[$x];
         }
-        return $sum/$cnt;
+        return ($sum/$cnt);
     }
 }
