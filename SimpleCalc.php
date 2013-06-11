@@ -98,6 +98,7 @@ class SimpleCalc
         return 0;
     }
 
+
     /**
      * MaxFromArray
      *
@@ -117,4 +118,21 @@ class SimpleCalc
         return $max;
     }
 
+
+    /*
+        * Average
+        *
+        *  @param table $table of mixed numbers(integer or float)
+        *
+        * @return float The average of all array numbers
+    */
+    public static function average($table)
+    {
+        $cnt = count($table);
+        $sum = 0;
+        for ($x =0;$x < $cnt; $x++ ){
+            $sum = $sum + $table[$x];
+        }
+        return $sum/$cnt;
+    }
 }
