@@ -186,6 +186,24 @@ class SimpleCalc
         return $max;
     }
 
+    /*
+         * AddAbs
+         *
+         *  @param array $input of mixed numbers(integer or float)
+         *
+         * @return float The sum of absolute values of all array numbers
+     */
+
+    public static function addAbs($input)
+    {
+        $tmp = 0;
+        $sum = 0;
+        foreach($input as $tmp){
+            $sum = $sum + abs($tmp);
+        }
+        return $sum;
+    }
+
 
     /*
         * Average
