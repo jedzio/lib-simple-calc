@@ -124,4 +124,47 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    public function testSixtyNine()
+    {
+        $this->assertEquals(69, SimpleCalc::sixtynine());
+    }
+
+    public function testEleven()
+    {
+        $this->assertEquals(11, SimpleCalc::Eleven());
+
+    }
+    public function testOneDivX(){
+        $this->assertEquals(0.5, SimpleCalc::oneDivX(2));
+        $this->assertEquals(0.25, SimpleCalc::oneDivX(4));
+        $this->assertEquals(0.1, SimpleCalc::oneDivX(10));
+    }
+
+    public function testExponentiation()
+    {
+        $this->assertEquals(36.0, SimpleCalc::exponentiation(6,2));
+        $this->assertEquals(15.625, SimpleCalc::exponentiation(2.5,3));
+        $this->assertEquals(4.0, SimpleCalc::exponentiation(2,2));
+        $this->assertEquals(1.0, SimpleCalc::exponentiation(20,0));
+        $this->assertEquals(5.0, SimpleCalc::exponentiation(5,1));
+    }
+
+    public function testLinearEquation()
+    {
+        $this->assertEquals(0.5, SimpleCalc::LinearAquationAxb(2,1));
+    }
+
+    public function testOneDivSquareXMinus1()
+    {
+        $this->assertEquals(1 / 3, SimpleCalc::oneDivSquareXMinus1(2));
+    }
+    public function testSumOfSquare()
+    {
+        $this->assertEquals(29, SimpleCalc::sumOfSquares(array(2, 3, 4)));
+        $this->assertEquals(8, SimpleCalc::sumOfSquares(array(2, 2)));
+        $this->assertEquals(0, SimpleCalc::sumOfSquares(array(0, 0, 0, 0)));
+        $this->assertEquals(18, SimpleCalc::sumOfSquares(array(-3, -3)));
+    }
+
+
 }
