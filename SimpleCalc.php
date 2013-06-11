@@ -226,7 +226,7 @@ class SimpleCalc
         */
     public static function SumTablix($a){
         $result = 0;
-        for ($i = 1; $i < count($a); $i++) {
+        for ($i = 0; $i < count($a); $i++) {
             $result=$result+$a[$i];
         }
         return $result;
