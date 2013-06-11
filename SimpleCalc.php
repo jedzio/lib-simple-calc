@@ -38,7 +38,13 @@ class SimpleCalc
      */
     public static function productOfArray($array)
     {
-        return  array_product($array);
+        $res = $array[0];
+
+        for ($i = 1; $i < count($array); $i++) {
+            $res = $res * $array[$i];
+        }
+
+        return $res;
     }
 
     /**

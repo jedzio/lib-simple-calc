@@ -51,9 +51,9 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     public function getProductOfArray()
     {
         return array(
-            array([1,2,3], 6),
-            array([1,1], 1),
-            array([0.2, 0.3],0.06),
+            array(array(1,2,3), 6),
+            array(array(1,1), 1),
+            array(array(0.2, 0.3),0.06),
         );
     }
 
