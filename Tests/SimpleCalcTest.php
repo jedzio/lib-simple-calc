@@ -19,9 +19,9 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     public function getTabSum()
     {
         return array(
-            array(array(1,2,3), 4),
-            array(array(1,1,3), 4),
-            array(array(0.1, 0.7, 0.3),0.4),
+            array(array(2,2,1), 4),
+            array(array(2,6,3), 8),
+            array(array(0.2, 0.4, 0.3),0.6),
         );
     }
 

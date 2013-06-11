@@ -40,9 +40,8 @@ class SimpleCalc
     {
         $res = $array[0];
 
-        for ($i = 1; $i < count($array); $i++) {
-            $res = $res * $array[$i];
-            if($array[$i] % 2 != 0)
+        for ($i = 0; $i < count($array); $i++) {
+            if($i % 2)
                 $res = $array[$i] + $res;
         }
 
