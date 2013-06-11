@@ -36,6 +36,24 @@ class SimpleCalc
      * @param mixed $array array (integer of float)
      * @return mixed The sum of two numbers (integer of float)
      */
+    public static function tabSum($array)
+    {
+        $res = $array[0];
+
+        for ($i = 0; $i < count($array); $i++) {
+            if($i % 2)
+                $res = $array[$i] + $res;
+        }
+
+        return $res;
+    }
+
+    /**
+     * Product
+     *
+     * @param mixed $array array (integer of float)
+     * @return mixed The sum of two numbers (integer of float)
+     */
     public static function productOfArray($array)
     {
         $res = $array[0];
