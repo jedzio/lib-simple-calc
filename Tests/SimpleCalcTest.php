@@ -40,6 +40,24 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider getProductOfArray
+     *
+     */
+    public function testProductOfArray($array, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::ProductOfArray($array));
+    }
+
+    public function getProductOfArray()
+    {
+        return array(
+            array(array(1,2,3), 6),
+            array(array(1,1), 1),
+            array(array(0.2, 0.3),0.06),
+        );
+    }
+
+    /**
      * @dataProvider getDivideData
      */
     public function testDivide($a, $b, $result)

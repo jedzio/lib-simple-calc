@@ -30,6 +30,22 @@ namespace Gajdaw\TddExamples\SimpleCalc;
  */
 class SimpleCalc
 {
+    /**
+     * Product
+     *
+     * @param mixed $array array (integer of float)
+     * @return mixed The sum of two numbers (integer of float)
+     */
+    public static function productOfArray($array)
+    {
+        $res = $array[0];
+
+        for ($i = 1; $i < count($array); $i++) {
+            $res = $res * $array[$i];
+        }
+
+        return $res;
+    }
 
     /**
      * Addition
