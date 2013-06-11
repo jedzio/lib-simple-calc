@@ -49,7 +49,6 @@ class SimpleCalc
         return $res;
     }
 
-
     /**
      * Product
      *

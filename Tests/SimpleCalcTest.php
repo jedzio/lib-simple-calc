@@ -7,6 +7,24 @@ use Gajdaw\TddExamples\SimpleCalc\SimpleCalc;
 class SimpleCalcTest extends \PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @dataProvider getTabSum
+     *
+     */
+    public function testTabSum($array, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::tabSum($array));
+    }
+
+    public function getTabSum()
+    {
+        return array(
+            array(array(1,2,3), 4),
+            array(array(1,1,3), 4),
+            array(array(0.1, 0.7, 0.3),0.4),
+        );
+    }
+
     public function testAdd()
     {
         $this->assertEquals(3, SimpleCalc::add(1, 2));
