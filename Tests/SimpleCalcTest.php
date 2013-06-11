@@ -127,6 +127,23 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider getAddAbs
+     */
+    public function testAddAbs($result, $input)
+    {
+        $this->assertEquals($result,SimpleCalc::addAbs($input));
+    }
+
+    public function getAddAbs()
+    {
+        return array(
+            array(17, array(2, 5, 10)),
+            array(17, array(2,-5,10)),
+            array(15, array(2, 3, -1  , -4, 5)),
+        );
+    }
+
+    /**
      * @dataProvider getAverageData
      */
     public function testAverage($result, $a)
