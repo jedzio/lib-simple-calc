@@ -64,4 +64,10 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         SimpleCalc::divide(30, 0);
     }
 
+    public function testMaxFromArray()
+    {
+        $this->assertEquals(6, SimpleCalc::maxFromArray(array(1, 6, 2)));
+        $this->assertEquals(1, SimpleCalc::maxFromArray(Array(-2,-3,1,0,-10)));
+        $this->assertEquals(2, SimpleCalc::maxFromArray(Array(2)));
+    }
 }

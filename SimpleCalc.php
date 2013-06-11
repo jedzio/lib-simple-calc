@@ -98,4 +98,23 @@ class SimpleCalc
         return 0;
     }
 
+    /**
+     * MaxFromArray
+     *
+     * @param array $a Table (integer)
+     *
+     * @return int The max of table
+     */
+    public static function maxFromArray($a)
+    {
+        $max = $a[0];
+
+        for ($i = 1; $i < count($a); $i++) {
+            if($max < $a[$i])
+                $max = $a[$i];
+        }
+
+        return $max;
+    }
+
 }
