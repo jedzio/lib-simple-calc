@@ -98,4 +98,23 @@ class SimpleCalc
         return 0;
     }
 
+    /**
+     * MaxFromArray
+     *
+     * @param mixed $a Table (integer of float)
+     *
+     * @return float The max of table
+     */
+    public static function maxFromArray($a)
+    {
+        $max = 0;
+
+        for ($i = 0; $i < $a.ob_get_length(); $i++) {
+            if($max < $a[i])
+                $max = $a[i];
+        }
+
+        return $max;
+    }
+
 }
