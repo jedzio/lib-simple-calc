@@ -199,5 +199,19 @@ class SimpleCalc
         }
         return $sum;
     }
-
+    
+    /*
+        * Sum of integer tablix
+        *
+        * @param array $a Table (integer)
+        *
+        * @return integer The sum of table
+        */
+    public static function SumTablix($a){
+        $result = 0;
+        for ($i = 1; $i < count($a); $i++) {
+            $result=$result+$a[$i];
+        }
+        return $result;
+    }
 }
