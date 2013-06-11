@@ -73,7 +73,6 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
      * @dataProvider getAverageData
      */
     public function testAverage($result, $a)

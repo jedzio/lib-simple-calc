@@ -122,7 +122,7 @@ class SimpleCalc
     /*
         * Average
         *
-        *  @param table $table of mixed numbers(integer or float)
+        *  @param array $table of mixed numbers(integer or float)
         *
         * @return float The average of all array numbers
     */
